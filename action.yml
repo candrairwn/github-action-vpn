@@ -58,25 +58,25 @@ runs:
       shell: powershell
     - id: vpn-wireguard
       if: ${{ inputs.VPN_CONFIG == 'wireguard' && matrix.os == 'ubuntu-latest' }}
-      run: script/wireguard.sh
+      run: scripts/wireguard.sh
       shell: bash
     - id: vpn-openvpn
       if: ${{ inputs.VPN_CONFIG == 'openvpn' && matrix.os == 'ubuntu-latest' }}
-      run: script/openvpn.sh
+      run: scripts/openvpn.sh
       shell: bash
     - id: vpn-l2tp
       if: ${{ inputs.VPN_CONFIG == 'l2tp' && matrix.os == 'ubuntu-latest' }}
-      run: script/l2tp.sh
+      run: scripts/l2tp.sh
       shell: bash
     - id: vpn-pptp
       if: ${{ inputs.VPN_CONFIG == 'pptp' && matrix.os == 'ubuntu-latest' }}
-      run: script/pptp.sh
+      run: scripts/pptp.sh
       shell: bash
     - id: vpn-forticlient
       if: ${{ inputs.VPN_CONFIG == 'forticlient' && matrix.os == 'ubuntu-latest' }}
-      run: script/pptp.sh
+      run: scripts/pptp.sh
       shell: bash
     - id: vpn-cisco
       if: ${{ inputs.VPN_CONFIG == 'cisco' && matrix.os == 'ubuntu-latest' }}
-      run: script/cisco-anyconnect.sh
+      run: scripts/cisco-anyconnect.sh
       shell: bash
