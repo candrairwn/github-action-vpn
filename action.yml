@@ -21,6 +21,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - id: vpn-l2tp
-      run: scripts/l2tp.sh
+    - name: vpn-l2tp
+      run: ./scripts/l2tp.sh
       shell: bash
